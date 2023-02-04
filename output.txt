@@ -1,1 +1,114 @@
+Two Sum - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+Container With Most Water - You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+3Sum - Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Maximum Subarray - Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+Maximum Product Subarray - Given an integer array nums, find a subarray that has the largest product, and return the product.
+
+Find Minimum in Rotated Sorted Array - Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array nums = [0,1,2,4,5,6,7] might become:
+
+Product of Array Except Self - Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+Search in Rotated Sorted Array - There is an integer array nums sorted in ascending order (with distinct values).
+
+Best Time to Buy and Sell Stock - You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+Contains Duplicate - Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+Reverse Bits - Reverse bits of a given 32 bits unsigned integer.
+
+Number of 1 Bits - Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight [http://en.wikipedia.org/wiki/Hamming_weight]).
+
 Missing Number - Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+Counting Bits - Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
+
+Sum of Two Integers - Given two integers a and b, return the sum of the two integers without using the operators + and -.
+
+Longest Palindromic Substring - Given a string s, return the longest palindromic substring in s.
+
+Combination Sum - Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+
+Jump Game - You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
+
+Unique Paths - There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.
+
+Climbing Stairs - You are climbing a staircase. It takes n steps to reach the top.
+
+Decode Ways - A message containing letters from A-Z can be encoded into numbers using the following mapping:
+
+Word Break - Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+House Robber - You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+
+House Robber II - You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and it will automatically contact the police if two adjacent houses were broken into on the same night.
+
+Longest Increasing Subsequence - Given an integer array nums, return the length of the longest strictly increasing subsequence.
+
+Coin Change - You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+Longest Common Subsequence - Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+
+Longest Consecutive Sequence - Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+
+Clone Graph - Given a reference of a node in a connected [https://en.wikipedia.org/wiki/Connectivity_(graph_theory)#Connected_graph] undirected graph.
+
+Number of Islands - Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+
+Course Schedule - There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+
+Pacific Atlantic Water Flow - There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. The Pacific Ocean touches the island's left and top edges, and the Atlantic Ocean touches the island's right and bottom edges.
+
+Find Median from Data Stream - The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
+
+Top K Frequent Elements - Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+
+Merge Intervals - Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+
+Insert Interval - You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.
+
+Non-overlapping Intervals - Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+
+Remove Nth Node From End of List - Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+Merge Two Sorted Lists - You are given the heads of two sorted linked lists list1 and list2.
+
+Merge k Sorted Lists - You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+Linked List Cycle - Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+Reorder List - You are given the head of a singly linked-list. The list can be represented as:
+
+Reverse Linked List - Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+Rotate Image - You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+
+Spiral Matrix - Given an m x n matrix, return all elements of the matrix in spiral order.
+
+Set Matrix Zeroes - Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+Word Search - Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+
+Valid Parentheses - Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+Group Anagrams - Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+Minimum Window Substring - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+
+Valid Anagram - Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+Longest Repeating Character Replacement - You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+Palindromic Substrings - Given a string s, return the number of palindromic substrings in it.
+
+Longest Substring Without Repeating Characters - Given a string s, find the length of the longest substring without repeating characters.
+
+Validate Binary Search Tree - Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+Same Tree - Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+
+Binary Tree Level Order Traversal - Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+

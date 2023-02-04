@@ -5,6 +5,7 @@ import time
 
 def get_description(question_name):
     while True: 
+        time.sleep(1)
         try: 
             url = "https://leetcode.com/problems/" + question_name.lower().replace(" ", "-") + "/"
             response = requests.get(url)
@@ -13,12 +14,17 @@ def get_description(question_name):
             description = description.split('\n')[0]
             return description
         except:
-            time.sleep(1)
+            print("Stalled on: " + question_name)
             pass
 
 with open('blind75.csv', 'r') as file:
     reader = csv.DictReader(file)
-    for row in reader:
-        question_name = row['Question Name'].encode('ascii', 'ignore').decode()
-        description = get_description(question_name)
-        print(f"{description}\n")
+    fieldnames = reader.fieldnames + ['Solution Notes']
+    with open('blind75_mod.csv', 'w', newline='') as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in reader:
+            question_name = row['Question Name'].encode('ascii', 'ignore').decode()
+            description = get_description(question_name)
+            row['Solution Notes'] = description
+            writer.writerow(row)
