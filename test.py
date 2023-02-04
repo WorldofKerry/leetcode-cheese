@@ -28,16 +28,16 @@ while(1):
             # SpeakText(MyText)
              
             highest_match_score = 0
-            highest_match_question = ""
-            with open('blind75_mod.csv', 'r') as file:
+            highest_match_description = ""
+            with open('blind75_mod.csv', 'r', encoding='utf-8') as file:
                 reader = csv.DictReader(file)
                 for row in reader:
                     description = row['Description'].encode('ascii', 'ignore').decode().lower()
                     match_score_val = match_score(description, MyText)
                     if match_score_val > highest_match_score:
                         highest_match_score = match_score_val
-                        highest_match_question = description
-            print("The most similar question is: ", highest_match_question)
+                        highest_match_description = description
+            print("The most similar question is: ", highest_match_description)
              
     except sr.RequestError as e:
         print("Could not request results; {0}".format(e))
