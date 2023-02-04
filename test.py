@@ -1,19 +1,46 @@
-import requests
-from bs4 import BeautifulSoup
-
-url = "https://leetcode.com/problems/missing-number/"
-
-# Make a GET request to the URL
-response = requests.get(url)
-
-# Parse the HTML content of the page
-soup = BeautifulSoup(response.content, 'html.parser')
-
-# Find the description in the meta tag with the name "description"
-description = soup.find('meta', attrs={'name': 'description'})['content']
-
-# Extract the first line of the description up to the first newline character
-description = description.split('\n')[0]
-
-# Print the description
-print(description)
+import speech_recognition as sr
+import pyttsx3
+import csv
+import difflib
+ 
+# Initialize the recognizer
+r = sr.Recognizer()
+ 
+# Function to convert text to speech
+def SpeakText(command):
+    engine = pyttsx3.init()
+    engine.say(command)
+    engine.runAndWait()
+     
+def match_score(description, user_input):
+    return difflib.SequenceMatcher(None, description.lower(), user_input.lower()).ratio()
+ 
+# Loop infinitely for user to speak
+while(1):   
+    try:
+        # use the microphone as source for input.
+        with sr.Microphone() as source2:
+            r.adjust_for_ambient_noise(source2, duration=0.2)
+            audio2 = r.listen(source2)
+            MyText = r.recognize_google(audio2)
+            MyText = MyText.lower()
+            print("Did you say ", MyText)
+            # SpeakText(MyText)
+             
+            highest_match_score = 0
+            highest_match_question = ""
+            with open('blind75_mod.csv', 'r') as file:
+                reader = csv.DictReader(file)
+                for row in reader:
+                    description = row['Description'].encode('ascii', 'ignore').decode().lower()
+                    match_score_val = match_score(description, MyText)
+                    if match_score_val > highest_match_score:
+                        highest_match_score = match_score_val
+                        highest_match_question = description
+            print("The most similar question is: ", highest_match_question)
+             
+    except sr.RequestError as e:
+        print("Could not request results; {0}".format(e))
+         
+    except sr.UnknownValueError:
+        print("unknown error occurred")
