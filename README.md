@@ -1,6 +1,6 @@
 # Leetcode Live Solution Finder
 ## In Action
-Transcribed text: design a data structure that supports adding new words and finding if a string matches any previously added string
+```Transcribed text: design a data structure that supports adding new words and finding if a string matches any previously added string
 The most similar question is:  longest palindromic substring - given a string s, return the longest palindromic substring in s.
 The most similar question name is:  Longest Palindromic Substring
 The match score is:  0.38095238095238093
@@ -47,8 +47,7 @@ class Solution:
                 l += 1
 
             ans = max(ans, r - l + 1)
-        return ans
-
+        return ans```
 
 ## Data Source
 Blind 75 list and solution source: https://github.com/wk16/Leetcode-Blind-75/tree/main/PythonSolutions
