@@ -20,6 +20,9 @@ class Solution:
                 start = i - (temp - 1) // 2
                 end = i + temp // 2
         return s[start:end + 1]
+waiting for speech...
+waiting for speech...
+waiting for speech...
 Transcribed text: if you choose any character of the string and change it to any other uppercase english character
 The most similar question is:  longest repeating character replacement - you are given a string s and an integer k. you can choose any character of the string and change it to any other uppercase english character. you can perform this operation at most k times.
 
