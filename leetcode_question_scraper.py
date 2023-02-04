@@ -1,9 +1,24 @@
 import requests
+from bs4 import BeautifulSoup
+import csv
+import time
 
-url = "https://leetcode.com/problems/missing-number/"
+def get_description(question_name):
+    while True: 
+        try: 
+            url = "https://leetcode.com/problems/" + question_name.lower().replace(" ", "-") + "/"
+            response = requests.get(url)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            description = soup.find('meta', attrs={'name': 'description'})['content']
+            description = description.split('\n')[0]
+            return description
+        except:
+            time.sleep(1)
+            pass
 
-# Make a GET request to the URL
-response = requests.get(url)
-
-# Print the HTML content of the page
-print(response.content)
+with open('blind75.csv', 'r') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        question_name = row['Question Name'].encode('ascii', 'ignore').decode()
+        description = get_description(question_name)
+        print(f"{description}\n")

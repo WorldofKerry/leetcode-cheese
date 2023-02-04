@@ -1,0 +1,71 @@
+﻿Question Number,Question Name,Array,Difficulty,Completed,Solution Notes,Runtime
+1, Two Sum,Array,Easy,X,"Create hashmap for compliment solution, run through list of nums checking if compliment is in map if yes return indices, if not add to map",O(N)
+4, Container With Most Water,Array,Medium,X,"2 Pointer, while l<r. Move pointer with lower height.",O(N)
+5, 3Sum,Array,Medium,X,"Sort list, for every unique num. move left and right point if sum is too small or great, add ans if achieved. ",O(N^2)
+14, Maximum Subarray,Array,Medium,X,"Current = first element, max = max element. For every num if the curr total is < 0 reset to 0 else add the num to curr and update max if necessary",O(N)
+38, Maximum Product Subarray,Array,Medium,X,"For every element in array keep track of min and max product and update with each number, keep a global max to return. ",O(N)
+39, Find Minimum in Rotated Sorted Array,Array,Medium,X,"if mid-1 >mid or mid+1<mid return mid/mid+1. Else check if l<mid and move l to mid+1, else move r to mid-1.",Log(N)
+55, Product of Array Except Self,Array,Medium,X,"Count product of array without 0s and num of 0s. If num 0s >1, return all 0s. If a 0 and this num isnt 0 append 0. if num is 0 append product, else append product/number",O(N)
+10, Search in Rotated Sorted Array,"Array, DP",Medium,X,While l<=r: if mid = target return. If l<mid then check if target is in range of l and mid and change r. Else change l. Else check if target inbetween mid and r and change l else change r.,O(log(n))
+30, Best Time to Buy and Sell Stock,"Array, Hashtable",Easy,X,loop over prices if price is lowest so far set buy to price otherwise check if maxProfit is less than price-buy,O(N)
+50, Contains Duplicate,Binary,Easy,X,"Use hashtable, loop if in hash return True. OR compare len of set(nums) to len of nums",O(N)
+40, Reverse Bits,Binary,Easy,,,
+41, Number of 1 Bits,Binary,Easy,,,
+60, Missing Number,Binary,Easy,X,n(n+1)/2 - sum(nums),O(N)
+67, Counting Bits,Binary,Easy,,,
+69, Sum of Two Integers,Binary,Medium,,,
+3, Longest Palindromic Substring,DP,Medium,X,Expand around center of 1 or 2 chars while outer 2 char in bound and equal for each char in s. Return longest.,O(N^2)
+11, Combination Sum,DP,Medium,,,
+16, Jump Game,DP,Medium,X,for every num if it can be reached up longest with max of longest and num+jump distance. If num cant be reached return false. Return true if last node reached.,O(N)
+19, Unique Paths,DP,Medium,X,"If out of bounds return 0, if end of path return 1, else return dp of down a square + dp of right a square. Use lru_cache for effencies.",O(N*M)
+20, Climbing Stairs,DP,Medium,X,"If n ==1, return 1 elif n==2, return 2 else return helper(n-1)+helper(n-2). Store results in a hashtable. OR use fibonci numbers",O(N)
+24, Decode Ways,DP,Medium,X,"create array of ans, for every num add the answer to the problem of num before. If 9<num and num before<27 add answer of 2 before as well. Return last in array of answers.",O(N)
+35, Word Break,DP,Medium,X,"Bottomup: create array size of word, for every word in dict check if it matches current string, if so update ith element in arr to 1. for every 1 in arr run dictt words again. Check if last element 1.",O(len(s)*DictWord)
+42, House Robber,DP,Medium,X,Max on current house plus DP on position+2 and DP on position+1. If second to end return max of 2. if end return end.,O(N)
+49, House Robber II,DP,Medium,X,Do House Robber but take max between houses - first house and houses - last house,O(N)
+64, Longest Increasing Subsequence,DP,Medium,X,"DP map keep track of longest starting at end and if num is less than curr, update DP. Create array add first num, for remaining nums if num is higher than last add to array else replace last num in array. Can use Binary Search to speed up.",O(N^2) / O(nLog(N))
+65, Coin Change,DP,Medium,X,Bottomup: Create array size target+1 and set each index to target+1. For each coin check if target can be made in fewer coins by using that coin and previous answer. ,O(Coins*Target)
+76, Longest Common Subsequence,DP,Medium,X,,
+33, Longest Consecutive Sequence,DP,Medium,X,Create set from nums. For each num check if previous num is in set. If not then check for consecutive numbers. This makes no duplicate sequences.,O(N)
+34, Clone Graph,Graph,Medium,,,
+43, Number of Islands,Graph,Medium,X,"Use dfs on every point, if 1 and not in visited add an island and run dfs.",O(N*M)
+45, Course Schedule,Graph,Medium,,,
+70, Pacific Atlantic Water Flow,Graph,Medium,,,
+63, Find Median from Data Stream,Heap,Medium,,,
+68, Top K Frequent Elements,Heap,Medium,X,count occurance of each num in dictionary. Use priority qeue to pop top k elements by value.,O(Nlog(k))
+17, Merge Intervals,Intervals,Medium,X,"Sort intervals by start time, for each interval check if starts after previous ends, ends after previous, or is encompassed by previous. Extra space for answer.",O(nLog(n))
+18, Insert Interval,Intervals,Medium,X,"Add newInterval, sort by start value, remove overlapping intervals. Use extra space for answer. Can do in O(N) with extra space.",O(nLog(n))
+72, Non-overlapping Intervals,Intervals,Medium,X,"Sort intervals by start time, for each check if previous end is after curr start, If so add 1 to ans then update curr end time to be least of prev and curr.",O(nLog(n))
+6, Remove Nth Node From End of List,Linked List,Easy,X,Fast pointer advance to N nodes ahead. Advance slow pointer and fast pointer until fast pointer hits null. Then skip next node on slow.,O(N)
+8, Merge Two Sorted Lists,Linked List,Medium,X,"Create new empty list, while both lists add smaller element then add rest of nonempty list.",O(N+M)
+9, Merge k Sorted Lists,Linked List,Hard,X,Divide and conquer using merge 2 sorted lists,O(Nlog(k))
+36, Linked List Cycle,Linked List,Medium,X,"Use fast and slow pointer, if equal return cycle, if one pointer null return no cycle",O(N)
+37, Reorder List,Linked List,Medium,,,
+44, Reverse Linked List,Linked List,Easy,X,"Prev=None, cur=head. While cur: next = cur.next, cur.next=prev, prev=cur, cur=next. Return prev",O(N)
+12, Rotate Image,Matrix,Medium,,,
+15, Spiral Matrix,Matrix,Medium,,,
+21, Set Matrix Zeroes,Matrix,Medium,,,
+23, Word Search,String,Hard,,,
+7, Valid Parentheses,String,Easy,X,"Use stack to keep track of opening, if closing not top of stack return false. If stack not empty at end return false. Use dictionary to map openning/closing",O(N)
+13, Group Anagrams,String,Medium,X,Use unique prime for each char in each string. Find product and use as key of hashmap for each group,O(N*M)
+22, Minimum Window Substring,String,Medium,,,
+56, Valid Anagram,String,Medium,X,"Create hashmap with all chars from first string and their count, remove them for each occurance in second string if hashmap empty return false. If char not in hashmap return false",O(N+M)
+71, Longest Repeating Character Replacement,String,Medium,X,"Dict of freq of chars, keep l, r pointer. Move r constantly, add r char to freq, if freq-l+r+1>k move l otherwise don’t, take max of ans and r-l+1.",O(N)
+75, Palindromic Substrings,"String, Sliding Window",Medium,X,Def function to count palandroms starting from center. Call function on each char in string and take sum of all results.,O(N^2)
+2, Longest Substring Without Repeating Characters,Topic,Easy,X,"Map for last time each char was used, loop through string and if char used more recently than start of current substring move start to last use of char + 1, update longest if needed",O(N)
+25, Validate Binary Search Tree,Tree,Easy,X,"If not node return True. Else set min and max vals to None and if val is out of min, max, return false otherwise recursively call left and right changing min and max ",O(N)
+26, Same Tree,Tree,Easy,X,"Use dfs to check if each node is the same in both tree. Dfs should take 2 nodes, one from each tree.",O(N)
+27, Binary Tree Level Order Traversal,Tree,Medium,X,Use bfs but don’t update q with children until q is empty. Use separate array to store curr next and nextLevel,O(N)
+28, Maximum Depth of Binary Tree,Tree,Easy,X,If root is none return 0 otherwise return 1+max of recursive call of left and right node.,O(N)
+29, Construct Binary Tree from Preorder and Inorder Traversal,Tree,Hard,,,
+31, Binary Tree Maximum Path Sum,Tree,Hard,,,
+46, Implement Trie (Prefix Tree),Tree,Medium,X,"Create TrieNode class with map children and boolean endWord. Insert each char and add TrieNode if not in children, mark end of word. Search children by children",X
+47, Design Add and Search Words Data Structure,Tree,Medium,X,Create TrieNode class. Add word like Implement Trie. Search if '.' for all children of node call,Add O(all letters of all words) SearchO(height) for no .
+48, Word Search II,Tree,Medium,,,
+51, Invert Binary Tree,Tree,Medium,X,"Set root.right to self.invertTree(right,left) and vica versa",O(N)
+52, Kth Smallest Element in a BST,Tree,Medium,,,
+53, Lowest Common Ancestor of a Binary Search Tree,Tree,Easy,X,If q/p of different sides of root return root else move down. If root = p or q return p or q.,O(H)
+54, Lowest Common Ancestor of a Binary Tree,Tree,Medium,X,"Use dfs, if node then check left and right trees if 2 of curr, left or right are targets then curr node is ans, else if one of them return true else return false. Use var to store ans with init.",O(N)
+73, Serialize and Deserialize BST,Tree,Medium,,,
+74, Subtree of Another Tree,Tree,Easy,X,Function checks if each tree =  subtree recursively. Call sameTree function recursively on all nodes of tree.,O(T*ST)
+32, Valid Palindrome,Two Pointer,Easy,X,while left < right the check if char is alnum in while loop and if chars don’t match return false else change r/l.,O(N)
