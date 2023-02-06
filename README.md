@@ -1,4 +1,5 @@
 # Leetcode Live Solution Finder
+Run the script during an coding interview. The script will parse your speech input, and show you the solution to the most similar leetcode question from Blind75. 
 ## In Action
 ```
 Transcribed text: design a data structure that supports adding new words and finding if a string matches any previously added string
